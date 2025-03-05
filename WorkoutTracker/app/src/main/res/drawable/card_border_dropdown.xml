@@ -1,0 +1,26 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<!-- res/drawable/spinner_background_with_arrow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/card" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/card_stroke" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+    <!-- Inset Item to Create Space for the Arrow -->
+    <item android:drawable="@drawable/baseline_arrow_drop_down_24"
+        android:gravity="end|center_vertical"
+        android:right="8dp"/>
+</layer-list>

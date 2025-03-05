@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thickness="8dp"
+            android:useLevel="false">
+            <solid android:color="#FFAE00"/>
+        </shape>
+    </item>
+</layer-list>

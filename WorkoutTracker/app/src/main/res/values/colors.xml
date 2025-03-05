@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cool_black">#3b3b3b</color>
+    <color name="special_date_background">#00FF00</color><!-- Highlight color -->
+    <color name="default_date_background">#FFFFFF</color> <!-- Default background color -->
+    <color name="important_button_color">#CCCCCC</color>
+    <color name="highlight_color">#FFEB3B</color>
+    <color name="cooler_black">#424242</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="diamond">#B9F2FF</color>
+    <color name="active_indicator">#FFEB3B</color>
+    <color name="inactive_indicator">#000</color>
+
+    <!--ThemeBased-->
+    <color name="textSecondary">#A1A1A1</color>
+    <color name="text">#000</color>
+    <color name="screen">#FFF</color>
+    <color name="screen_secondary">#B9B0B0</color>
+    <color name="card">#FFF</color>
+    <color name="card_stroke">#CCCCCC</color>
+    <color name="popup">#D8D8D8</color>
+    <color name="workout_card">#FFF</color>
+
+    <!--Ice-->
+    <color name="ice_theme_background">#00214E</color>
+    <color name="ice_blue">#A0E7E5</color>
+    <color name="frozen_ocean_blue">#4BA3C7</color>
+    <color name="snow_white">#FFFFFF</color>
+    <color name="glacier_white">#F0F5F9</color>
+    <color name="snow_glow">#E6F7FF</color>
+    <color name="frozen_black">#1A1A1A</color>
+    <color name="ice_workout_card">#8CE6F7FF</color>
+
+    <!--Default Night-->
+    <color name="night_workout_card">@color/cooler_black</color>
+
+    <!--Silver-->
+    <color name="silver_workout_card">@color/cooler_black</color>
+
+    <!--Supersets-->
+    <color name="superset_1">#FFC107</color>
+    <color name="superset_2">#FF5722</color>
+    <color name="superset_3">#E91E63</color>
+    <color name="superset_4">#9C27B0</color>
+    <color name="superset_5">#3F51B5</color>
+    <color name="superset_6">#2196F3</color>
+    <color name="superset_7">#4CAF50</color>
+    <color name="superset_8">#CDDC39</color>
+
+    <!--Workout-->
+    <color name="exercise_title">#FFF</color>
+    <color name="set_warm_up">#FFC107</color>
+    <color name="set_drop">@color/purple_500</color>
+    <color name="set_rest_pause">#219DE1</color>
+    <color name="set_failure">#D30D0A</color>
+    <color name="set_delete_color">#FF0000</color>
+    <color name="timer_color">#000</color>
+    <color name="timer_color_ice">#00AEEF</color>
+    <color name="timer_color_night">@color/white</color>
+    <color name="timer_color_silver">@color/silver</color>
+</resources>

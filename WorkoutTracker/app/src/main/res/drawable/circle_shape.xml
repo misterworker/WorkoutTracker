@@ -1,0 +1,17 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#CCCCCC" />
+    <size
+        android:width="50dp"
+        android:height="50dp" />
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF" />
+</shape>

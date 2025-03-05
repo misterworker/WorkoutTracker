@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Top Horizontal Line -->
+    <View
+        android:id="@+id/top_horizontal_line"
+        android:visibility="gone"
+        android:layout_marginEnd="48dp"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:layout_gravity="end"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Top Vertical Line -->
+    <View
+        android:id="@+id/top_vertical_line"
+        android:visibility="gone"
+        android:layout_marginEnd="48dp"
+        android:layout_width="4dp"
+        android:layout_height="12dp"
+        android:layout_gravity="end"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Exercise Title -->
+            <TextView
+                android:id="@+id/exercise_title"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:gravity="center|start"
+                android:textStyle="bold" />
+
+            <!-- Header Row -->
+            <ImageButton
+                android:id="@+id/exercise_options_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/options"
+                android:src="@drawable/ic_more_vert" />
+
+        </LinearLayout>
+
+        <!-- Notes TextView -->
+        <EditText
+            android:id="@+id/notes_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="6"
+            android:hint="@string/add_notes_hint"
+            android:background="@drawable/edit_text_background"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:isScrollContainer="true"
+            android:maxLength="200"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/set_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/set"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/weight_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kg"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/reps_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/reps"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/set_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textStyle="bold"
+            android:gravity="start"/>
+    </LinearLayout>
+
+    <!-- Container for Sets -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sets_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:nestedScrollingEnabled="false"/>
+
+    <!-- Add Set Button -->
+    <Button
+        android:id="@+id/add_set_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="6dp"
+        android:text="@string/add_set" />
+
+    <!-- Bottom Vertical Line -->
+    <View
+        android:id="@+id/bottom_vertical_line"
+        android:visibility="gone"
+        android:layout_width="4dp"
+        android:layout_height="12dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="48dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Bottom Horizontal Line -->
+    <View
+        android:id="@+id/bottom_horizontal_line"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="4dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="48dp"
+        android:background="@android:color/darker_gray" />
+
+</LinearLayout>

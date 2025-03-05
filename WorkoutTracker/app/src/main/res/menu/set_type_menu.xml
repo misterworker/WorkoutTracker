@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_drop_set" android:title="@string/drop_set" />
+    <item android:id="@+id/action_rest_pause_set" android:title="@string/rest_pause_set" />
+    <item android:id="@+id/action_failure_set" android:title="@string/failure_set" />
+    <item android:id="@+id/action_warmup_set" android:title="@string/warm_up_set" />
+</menu>

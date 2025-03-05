@@ -1,0 +1,86 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name = "SCREEN">
+        <item name = "android:background">#000</item>
+    </style>
+
+    <style name = "TEXTS">
+        <item name = "android:textColor">#FFF</item>
+    </style>
+
+
+    <!-- BASE NIGHT THEME. -->
+    <style name="Theme.WorkoutTracker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="actionBarColour">@color/cooler_black</item>
+        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="iconFillColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/cooler_black</item> <!-- Dark gray -->
+        <item name="timerFillColor">@color/timer_color_night</item>
+        <item name="iconActionBarColor">@color/white</item>
+        <item name="workoutCardBackgroundColor">@color/night_workout_card</item>
+        <item name="exerciseCardBackgroundColor">@color/transparent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="Theme.WorkoutTracker.NoActionBar" parent="Theme.WorkoutTracker">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+
+    <!-- SILVER NIGHT THEME -->
+    <style name="Theme.WorkoutTracker.SilverNight" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/silver</item>
+        <item name="actionBarColour">@color/cooler_black</item>
+        <item name="colorPrimaryVariant">@color/silver</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="iconFillColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/cooler_black</item> <!-- Dark gray -->
+        <item name="timerFillColor">@color/timer_color_silver</item>
+        <item name="iconActionBarColor">@color/white</item>
+        <item name="workoutCardBackgroundColor">@color/silver_workout_card</item>
+        <item name="exerciseCardBackgroundColor">@color/transparent </item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.WorkoutTracker.SilverNight.NoActionBar" parent="Theme.WorkoutTracker.SilverNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

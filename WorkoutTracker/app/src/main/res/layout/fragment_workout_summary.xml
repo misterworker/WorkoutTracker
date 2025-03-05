@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background View -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/screen"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/actionBarColour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Summary"
+        android:visibility="gone"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:titleTextColor="@color/white" />
+
+    <!-- ScrollView wrapping the content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/fragment_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Main Content Area (Merged LinearLayout Content) -->
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/workoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/timeTaken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/completedSets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/dimming_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:visibility="gone" />
+
+            <!-- Save Workout Section -->
+            <LinearLayout
+                android:id="@+id/save_workout_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/card_border_popup"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/dialog_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_workout_message"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_save_workout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_workout" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_save_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_exercise_order" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_save_rest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_rest_timers" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_save_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_values" />
+
+                <!-- "Less" Icon -->
+                <ImageView
+                    android:id="@+id/less_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_less"
+                    android:contentDescription="@string/less"
+                    android:layout_gravity="end"
+                    android:padding="16dp"
+                    android:visibility="gone" />
+
+                <!-- "More" Icon -->
+                <ImageView
+                    android:id="@+id/more_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more"
+                    android:contentDescription="@string/more"
+                    android:layout_gravity="end"
+                    android:padding="16dp" />
+
+                <!-- Additional Checkboxes, initially hidden -->
+                <LinearLayout
+                    android:id="@+id/additional_checkboxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_save_superset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save_supersets" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_save_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save_notes" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_save_workout_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save_workout_details" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/done" />
+
+                <Button
+                    android:id="@+id/button_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+
+            <!-- Chart Section -->
+            <LinearLayout
+                android:id="@+id/chart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_border">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/top_5_reps_barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/donutChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="16dp" />
+
+                <Button
+                    android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/done"
+                    android:text="@string/done"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

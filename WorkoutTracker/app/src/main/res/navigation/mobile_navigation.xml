@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+    <action
+        android:id="@+id/action_to_premium_container"
+        app:destination="@id/navigation_premium_container"
+        app:enterAnim="@anim/slide_in_side"
+        app:exitAnim="@anim/slide_out_side"
+        app:popEnterAnim="@anim/slide_in_side"
+        app:popExitAnim="@anim/slide_out_side" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.workoutwrecker.workouttracker.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_update_history_workout"
+            app:destination="@id/navigation_update_history_workout" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_plate_calc"
+            app:destination="@id/navigation_plate_calc" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_community"
+            app:destination="@id/navigation_community" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.workoutwrecker.workouttracker.ui.stats.StatsFragment"
+        android:label="@string/title_stats"
+        tools:layout="@layout/fragment_stats" />
+
+    <fragment
+        android:id="@+id/navigation_history_workout"
+        android:name="com.workoutwrecker.workouttracker.ui.history.HistoryWorkoutFragment"
+        android:label="@string/history_title"
+        tools:layout="@layout/fragment_history_workout">
+        <action
+            android:id="@+id/action_navigation_workout_to_navigation_update_history_workout"
+            app:destination="@id/navigation_update_history_workout"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom"
+            app:popEnterAnim="@anim/slide_in_bottom"
+            app:popExitAnim="@anim/slide_out_bottom"/>
+        <action
+            android:id="@+id/action_navigation_workout_to_navigation_workout_view"
+            app:destination="@id/navigation_workout_view"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom"
+            app:popEnterAnim="@anim/slide_in_bottom"
+            app:popExitAnim="@anim/slide_out_bottom"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workout"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.CurrentWorkoutFragment"
+        android:label="@string/title_workout"
+        tools:layout="@layout/fragment_current_workout">
+        <action
+            android:id="@+id/action_navigation_workout_to_navigation_create_workout"
+            app:destination="@id/navigation_create_workout"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom"
+            app:popEnterAnim="@anim/slide_in_bottom"
+            app:popExitAnim="@anim/slide_out_bottom"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workout_view"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.start.WorkoutViewFragment"
+        android:label="@string/view_workout"
+        android:theme="@style/AppBottomSheetDialogTheme"
+        tools:layout="@layout/fragment_workout_view">
+        <action
+            android:id="@+id/action_workout_view_to_navigation_workout"
+            app:destination="@id/navigation_workout" />
+        <argument android:name="workout_title"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+        <argument android:name="workout_notes"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+        <argument android:name="selectedExercises"
+            app:nullable="true"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.workout.WorkoutExercise[]"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_update_history_workout"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.start.UpdateHistoryWorkoutFragment"
+        android:label="@string/update_history_workout"
+        android:theme="@style/AppBottomSheetDialogTheme"
+        tools:layout="@layout/fragment_update_history_workout">
+        <action
+            android:id="@+id/action_update_history_workout_to_navigation_workout_summary"
+            app:destination="@id/navigation_workout_summary" />
+        <action
+            android:id="@+id/action_update_history_workout_to_navigation_workout"
+            app:destination="@id/navigation_workout" />
+        <action
+            android:id="@+id/action_navigation_update_history_workout_to_navigation_exercise_selection"
+            app:destination="@id/navigation_exercise_selection" />
+        <action
+            android:id="@+id/action_navigation_update_history_workout_to_navigation_exercise_information"
+            app:destination="@id/navigation_exercise_information" />
+        <action
+            android:id="@+id/action_navigation_update_history_workout_to_navigation_move_exercise"
+            app:destination="@id/navigation_move_exercise"/>
+        <argument android:name="workout_title"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+        <argument android:name="workout_notes"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+        <argument android:name="workout_id"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+        <argument android:name="selectedExercises"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.workout.WorkoutExercise[]" />
+        <argument android:name="workout_date"
+            app:argType="long" />
+        <argument android:name="history_workout_id"
+            app:argType="string" />
+        <argument android:name="history_workout_length"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null"/>
+        <argument android:name="checkbox_enabled"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workout_summary"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.start.WorkoutSummaryFragment"
+        android:label="@string/summary"
+        tools:layout="@layout/fragment_workout_summary">
+    <action
+        android:id="@+id/action_update_history_workout_to_navigation_workout"
+        app:destination="@id/navigation_workout" />
+
+        <argument android:name="workout_title"
+            app:argType="string" />
+        <argument android:name="old_exercise_ids"
+            app:argType="string[]" />
+        <argument android:name="exercises"
+            app:nullable="true"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.workout.WorkoutExercise[]"
+            android:defaultValue="@null" />
+        <argument android:name="workout_notes"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null"/>
+        <argument android:name="length"
+            app:argType="string" />
+        <argument android:name="created_workout_id"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create_workout"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.create.CreateWorkoutFragment"
+        android:label="Create Workout"
+        tools:layout="@layout/fragment_create_workout">
+        <action
+            android:id="@+id/action_create_workout_to_navigation_workout"
+            app:destination="@id/navigation_workout" />
+        <action
+            android:id="@+id/action_navigation_create_workout_to_navigation_exercise_selection"
+            app:destination="@id/navigation_exercise_selection" />
+        <action
+            android:id="@+id/action_navigation_create_workout_to_navigation_exercise_information"
+            app:destination="@id/navigation_exercise_information" />
+        <action
+            android:id="@+id/action_navigation_create_workout_to_navigation_move_exercise"
+            app:destination="@id/navigation_move_exercise"/>
+        <argument android:name="selectedExercises"
+            app:nullable="true"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.workout.WorkoutExercise[]"
+            android:defaultValue="@null" />
+        <argument android:name="workout_title"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+        <argument android:name="workout_notes"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+        <argument android:name="workout_id"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_move_exercise"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.shared.MoveExerciseFragment"
+        android:label="@string/superset_title"
+        tools:layout="@layout/fragment_move_exercise">
+        <argument android:name="selectedExerciseId"
+            app:argType="string" />
+        <argument android:name="selectedExercises"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.workout.WorkoutExercise[]" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exercise_selection"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.shared.ExerciseSelectionFragment"
+        android:label="@string/exercise_selection"
+        tools:layout="@layout/fragment_workout_exercises" >
+        <action
+            android:id="@+id/action_navigation_exercise_selection_to_navigation_create_workout"
+            app:destination="@id/navigation_create_workout" />
+        <action
+            android:id="@+id/action_navigation_exercise_selection_to_navigation_update_history_workout"
+            app:destination="@id/navigation_update_history_workout" />
+        <argument android:name="selectedExercises"
+            app:nullable="true"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.exercise.Exercise[]"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_navigation_exercise_selection_to_navigation_filter_exercises_selection"
+            app:destination="@id/navigation_filter_exercises_selection" />
+        <argument android:name="selectedBodyParts"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null" />
+        <argument android:name="selectedTypes"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null" />
+        <argument android:name="origin"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_exercises"
+        android:name="com.workoutwrecker.workouttracker.ui.exercises.ExercisesFragment"
+        android:label="@string/title_exercises"
+        tools:layout="@layout/fragment_exercises" >
+        <action
+            android:id="@+id/action_navigation_exercise_to_navigation_filter_exercises"
+            app:destination="@id/navigation_filter_exercises" >
+        </action>
+        <argument android:name="selectedBodyParts"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null" />
+        <argument android:name="selectedTypes"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_navigation_exercises_to_navigation_create_exercise"
+            app:destination="@id/navigation_create_exercise"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom"
+            app:popEnterAnim="@anim/slide_in_bottom"
+            app:popExitAnim="@anim/slide_out_bottom"/>
+
+        <action
+            android:id="@+id/action_navigation_exercises_to_navigation_update_exercise"
+            app:destination="@id/navigation_update_exercise"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom"
+            app:popEnterAnim="@anim/slide_in_bottom"
+            app:popExitAnim="@anim/slide_out_bottom"/>
+
+        <action
+            android:id="@+id/action_navigation_exercises_to_navigation_exercise_information"
+            app:destination="@id/navigation_exercise_information" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_premium_container"
+        android:name="com.workoutwrecker.workouttracker.ui.premium.PremiumContainerFragment"
+        android:label="@string/premium"
+        tools:layout="@layout/fragment_premium_container" >
+
+        <argument
+            android:name="page"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.workoutwrecker.workouttracker.ui.home.SettingsFragment"
+        android:label="@string/settings_title"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_plate_calc"
+        android:name="com.workoutwrecker.workouttracker.ui.home.categories.PlateCalcFragment"
+        android:label="@string/home_category_plate_calc"
+        tools:layout="@layout/fragment_plate_calc" >
+        <action
+            android:id="@+id/action_navigation_plate_calc_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_community"
+        android:name="com.workoutwrecker.workouttracker.ui.home.categories.CommunityFragment"
+        android:label="@string/home_category_community"
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_navigation_community_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_sign_in"
+        android:name="com.workoutwrecker.workouttracker.ui.login.SignInFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_navigation_sign_in_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_sign_in"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_navigation_sign_in_to_navigation_register"
+            app:destination="@id/navigation_register" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.workoutwrecker.workouttracker.ui.login.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_verify_email"
+            app:destination="@id/navigation_verify_email" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_verify_email"
+        android:name="com.workoutwrecker.workouttracker.ui.login.VerifyEmailFragment"
+        android:label="Verify Email"
+        tools:layout="@layout/fragment_verify_email">
+        <action
+            android:id="@+id/action_navigation_verify_email_fragment_to_navigation_account_creation"
+            app:destination="@id/navigation_account_creation" />
+        <action
+            android:id="@+id/action_navigation_verify_email_fragment_to_navigation_unverified_account_creation"
+            app:destination="@id/navigation_unverified_account_creation" />
+        <action
+            android:id="@+id/action_navigation_verify_email_fragment_to_navigation_sign_in"
+            app:destination="@id/navigation_sign_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_account_creation"
+        android:name="com.workoutwrecker.workouttracker.ui.login.AccountCreationFragment"
+        android:label="@string/create_account"
+        tools:layout="@layout/fragment_login_create_account">
+        <action
+            android:id="@+id/action_accountCreationFragment_to_navigation_sign_in"
+            app:destination="@id/navigation_sign_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_unverified_account_creation"
+        android:name="com.workoutwrecker.workouttracker.ui.login.UnverifiedAccountCreationFragment"
+        android:label="@string/create_account_unverified"
+        tools:layout="@layout/fragment_login_create_account_unverified">
+        <action
+            android:id="@+id/action_unverifiedAccountCreationFragment_to_navigation_verify_email"
+            app:destination="@id/navigation_verify_email" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_filter_exercises"
+        android:name="com.workoutwrecker.workouttracker.ui.exercises.FilterExercisesFragment"
+        android:label="Filter exercises"
+        tools:layout="@layout/fragment_filter_exercises">
+        <action
+            android:id="@+id/action_filter_exercises_to_navigation_exercises"
+            app:destination="@id/navigation_exercises">
+
+        </action>
+        <argument android:name="selectedBodyParts"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null"/>
+        <argument android:name="selectedTypes"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_filter_exercises_selection"
+        android:name="com.workoutwrecker.workouttracker.ui.workout.shared.FilterExercisesSelectionFragment"
+        android:label="Filter exercises selection"
+        tools:layout="@layout/fragment_filter_exercises_selection">
+        <action
+            android:id="@+id/action_filter_exercises_selection_to_navigation_exercise_selection"
+            app:destination="@id/navigation_exercise_selection">
+
+        </action>
+        <argument android:name="selectedExercises"
+            app:nullable="true"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.exercise.Exercise[]"
+            android:defaultValue="@null"/>
+        <argument android:name="selectedBodyParts"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null"/>
+        <argument android:name="selectedTypes"
+            app:nullable="true"
+            app:argType="string[]"
+            android:defaultValue="@null"/>
+        <argument android:name="origin"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment android:id="@+id/placeholder" />
+
+    <fragment
+        android:id="@+id/navigation_create_exercise"
+        android:name="com.workoutwrecker.workouttracker.ui.exercises.CreateExerciseFragment"
+        android:label="Create Exercise"
+        tools:layout="@layout/fragment_create_exercise">
+        <action
+            android:id="@+id/action_create_exercise_to_navigation_exercises"
+            app:destination="@id/navigation_exercises" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_update_exercise"
+        android:name="com.workoutwrecker.workouttracker.ui.exercises.UpdateExerciseFragment"
+        android:label="Update Exercise"
+        tools:layout="@layout/fragment_update_exercise">
+        <action
+            android:id="@+id/action_navigation_update_exercise_to_navigation_exercises"
+            app:destination="@id/navigation_exercises" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exercise_information"
+        android:name="com.workoutwrecker.workouttracker.ui.exercises.details.ExerciseInformationFragment"
+        tools:layout="@layout/fragment_exercise_information">
+        <action
+            android:id="@+id/action_navigation_exercise_information_to_navigation_exercises"
+            app:destination="@id/navigation_exercises" />
+        <argument
+            android:name="exercise"
+            app:argType="com.workoutwrecker.workouttracker.ui.data.exercise.Exercise" />
+    </fragment>
+
+
+</navigation>

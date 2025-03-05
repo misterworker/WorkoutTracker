@@ -1,0 +1,211 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/screen"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/actionBarColour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/filter_exercises"
+        android:visibility="gone"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/card_border"
+            android:columnCount="2">
+
+            <CheckBox android:id="@+id/checkbox_barbell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/barbell"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_dumbbell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dumbbell"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_machine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/machine"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_cable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cable"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_kettle_bell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kettle_bell"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_weight_plate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_plate"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_resistance_band"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resistance_band"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_calisthenics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calisthenics"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_type_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other"
+                android:layout_columnWeight="1"/>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/body_part"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/card_border"
+            android:columnCount="2"
+            android:layout_margin="8dp">
+
+            <CheckBox android:id="@+id/checkbox_arms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/arms"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_legs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/legs"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_chest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chest"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/body_back"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_full_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_body"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_shoulders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoulders"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_abs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/abs"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_cardio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cardio"
+                android:layout_columnWeight="1"/>
+
+            <CheckBox android:id="@+id/checkbox_bodypart_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/body_other"
+                android:layout_columnWeight="1"/>
+
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">  <Button
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

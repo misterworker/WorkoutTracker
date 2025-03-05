@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<resources>
+    <string-array name="type_options">type_options
+        <item>@string/select_an_option</item>
+        <item>@string/dumbbell</item>
+        <item>@string/barbell</item>
+        <item>@string/machine</item>
+        <item>@string/cable</item>
+        <item>@string/kettle_bell</item>
+        <item>@string/resistance_band</item>
+        <item>@string/weight_plate</item>
+        <item>@string/calisthenics</item>
+        <item>@string/other</item>
+    </string-array>
+    <string-array name="bodypart_options">bodypart_options
+        <item>@string/select_an_option</item>
+        <item>@string/shoulders</item>
+        <item>@string/arms</item>
+        <item>@string/legs</item>
+        <item>@string/chest</item>
+        <item>@string/back</item>
+        <item>@string/full_body</item>
+        <item>@string/abs</item>
+        <item>@string/other</item>
+    </string-array>
+    <string-array name="category_options">category_options
+        <item>@string/select_an_option</item>
+        <item>@string/compound</item>
+        <item>@string/isolation</item>
+        <item>@string/cardio</item>
+        <item>@string/duration</item>
+        <item>@string/none</item>
+    </string-array>
+    <string-array name="private_options">private_options
+        <item>@string/select_an_option</item>
+        <item>@string/true_</item>
+        <item>@string/false_</item>
+    </string-array>
+
+    <string-array name="theme_entries">
+        <item>@string/default_mode</item>
+        <item>@string/silver_night</item>
+        <item>@string/night</item>
+    </string-array>
+
+    <!-- Other strings... -->
+    <string-array name="weight_systems_entries">
+        <item>lbs</item>
+        <item>kgs</item>
+        <item>stones</item>
+    </string-array>
+</resources>

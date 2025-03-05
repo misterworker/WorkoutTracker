@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/last_8_weeks"
+        android:title="@string/last_8_weeks" />
+
+    <item
+        android:id="@+id/last_12_weeks"
+        android:title="@string/last_12_weeks" />
+
+    <item
+        android:id="@+id/last_16_weeks"
+        android:title="@string/last_16_weeks" />
+
+    <item
+        android:id="@+id/last_20_weeks"
+        android:title="@string/last_20_weeks"/>
+
+    <item
+        android:id="@+id/last_24_weeks"
+        android:title="@string/last_24_weeks"/>
+</menu>

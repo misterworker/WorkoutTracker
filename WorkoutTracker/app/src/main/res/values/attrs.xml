@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<resources>
+    <attr name="iconFillColor" format="color" />
+    <attr name="iconActionBarColor" format="color" />
+    <attr name="cardBackgroundColor" format="color" />
+    <attr name="special_date_background" format="color" />
+    <attr name="actionBarColour" format="color"/>
+    <attr name="workoutCardBackgroundColor" format="color" />
+    <attr name="exerciseCardBackgroundColor" format="color" />
+
+    <declare-styleable name="TimerView">
+        <attr name="timerFillColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="swipeDirection" format="integer">
+            <flag name="left" value="1"/>
+            <flag name="right" value="2"/>
+        </attr>
+        <attr name="isEnabledSwipe" format="boolean"/>
+        <attr name="isFreeDragAfterOpen" format="boolean"/>
+        <attr name="isFreeHorizontalDrag" format="boolean"/>
+        <attr name="isContinuousSwipe" format="boolean"/>
+        <attr name="isTogether" format="boolean"/>
+        <attr name="rightItem" format="reference"/>
+        <attr name="leftItem" format="reference"/>
+        <attr name="draggedItem" format="reference"/>
+        <attr name="autoMovingSensitivity" format="integer"/>
+        <attr name="rightDragViewPadding" format="dimension"/>
+        <attr name="leftDragViewPadding" format="dimension"/>
+    </declare-styleable>
+</resources>

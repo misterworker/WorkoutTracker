@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<resources>
+    <color name="special_date_background">#006400</color>
+    <color name="text">#FFF</color>
+    <color name="screen">#000</color>
+    <color name="screen_secondary">#3E3636</color>
+    <color name="card">#000</color>
+    <color name="card_stroke">#FFF</color>
+    <color name="popup">#4E4E50</color>
+
+    <!--Supersets-->
+    <color name="superset_1">#FFEB3B</color>
+    <color name="superset_2">#FF9800</color>
+    <color name="superset_3">#FF5252</color>
+    <color name="superset_4">#8BC34A</color>
+    <color name="superset_5">#00BCD4</color>
+    <color name="superset_6">#673AB7</color>
+    <color name="superset_7">#3F51B5</color>
+    <color name="superset_8">#03A9F4</color>
+
+</resources>

@@ -1,0 +1,316 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<resources>
+    <!--common-->
+    <string name="back">Back</string>
+    <string name="app_name">Workout Tracker</string>
+    <string name="title_home">Home</string>
+    <string name="title_stats">Stats</string>
+    <string name="title_visuals">Visuals</string>
+    <string name="title_workout">Workout</string>
+    <string name="title_exercises">Exercises</string>
+    <string name="title_new_workout">New Workout</string>
+    <string name="menu">Menu</string>
+    <string name="filter">Filter</string>
+    <string name="save">Save</string>
+    <string name="options">options</string>
+    <string name="finish">Finish</string>
+    <string name="cancel">Cancel</string>
+    <string name="share">Share</string>
+    <string name="go">Go</string>
+    <string name="premium">Premium</string>
+    <string name="resume">Resume</string>
+    <string name="more">More</string>
+    <string name="less">Less</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="close">Close</string>
+    <string name="none">None</string>
+    <string name="true_">True</string>
+    <string name="false_">False</string>
+    <string name="tab_layout">Tab Layout</string>
+
+    <!--Alert-->
+    <string name="leave_create_exercise_title">Leave Exercise Creation</string>
+    <string name="leave_create_exercise_message">Leave exercise creation page without saving?</string>
+    <string name="leave_update_exercise_title">Leave Exercise Update</string>
+    <string name="leave_update_exercise_message">Leave exercise update page without saving?</string>
+    <string name="leave_superset_move_title">Leave Superset/Move</string>
+    <string name="leave_superset_move_message">Leave Superset/Move page without saving and return to the workout?</string>
+    <string name="return_login_title">Return</string>
+    <string name="return_login_message">Return to login page?</string>
+    <string name="return_verify_email_title">Return</string>
+    <string name="return_verify_email">Return to email verification?</string>
+    <string name="leave_summary_title">Leave Summary</string>
+    <string name="leave_summary_message">Leave summary page?</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_message">Are you sure you want to logout?</string>"
+    <string name="set_rest_timer">Set Rest Timer</string>
+    <string name="delete_workout_title">Delete Workout</string>
+    <string name="delete_workout_confirmation_message">Are you sure you want to delete</string>
+    <string name="finish_workout_creation_title">Create Workout</string>
+    <string name="finish_workout_creation_confirmation_message">Are you sure you want to create this workout?
+        (Updating will override all previous workouts. No backups are provided.)</string>
+    <string name="finish_workout_title">Finish Workout</string>
+    <string name="finish_workout_confirmation_message">Are you sure you want to finish the workout?</string>
+    <string name="cancel_workout_title">Cancel Workout</string>
+    <string name="cancel_workout_confirmation_message">Are you sure you want to cancel the workout?</string>
+    <string name="delete_notes_confirmation_title">Delete Notes</string>
+    <string name="delete_notes_confirmation_message">Are you sure you want to delete notes?</string>
+    <string name="delete_exercise_confirmation_title">Delete Exercise</string>
+    <string name="delete_exercise_confirmation_message">Are you sure you want to delete</string>
+    <string name="leave_workout_confirmation_title">Leave Workout</string>"
+    <string name="leave_workout_confirmation_message">Are you sure you want to leave without saving?</string>
+    <string name="clear_sets_title">Clear Sets</string>
+    <string name="clear_sets_message">Are you sure you want to delete all sets for</string>
+    <string name="type_text">Type</string>
+    <string name="type_text_message">Type is automatically appended to title.</string>
+    <string name="private_question_title">Private Usage</string>
+    <string name="private_question_message">Set Private to `Off` to disable its usage in visualisations</string>
+
+    <!--Login-->
+    <string name="login">Login</string>
+    <string name="log_in">Log In</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="re_password">Re-Enter Password</string>
+    <string name="username">Username</string>
+    <string name="verification_sent_title">Verification Sent!</string>
+    <string name="verification_sent">A verification email has been sent to your email address.
+        Please verify your email and click \'Verify\'. Meanwhile, you can decide on your username
+    and password by creating an unverified account.</string>
+    <string name="create_unverified_account"><u>Create Unverified Account</u></string>
+    <string name="bad_password">Password must be at least 8 characters long and include a mix of
+        letters, numbers, and special characters</string>
+    <string name="verify">Verify</string>
+    <string name="resend_verification_email">Resend Verification Email</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_account_unverified">Create Account (Unverified)</string>
+
+    <!--Home-->
+    <string name="profile_picture">pfp</string>
+    <string name="settings">Settings</string>
+    <string name="update_pfp">Update</string>
+    <string name="logout">Logout</string>"
+    <string name="change_profile_picture">Change Profile Picture</string>
+    <string name="home_category_new_workout">New Workout</string>
+    <string name="home_category_history">History</string>
+    <string name="home_category_plate_calc">Plate Calculator</string>
+    <string name="home_category_team">Team Workout</string>
+    <string name="home_category_community">Community</string>">
+    <string name="home_category_timer">Timer</string>
+    <string name="workouts_completed">Workouts Completed</string>
+    <string name="new_workout_segment">Start a fresh workout without initial exercises!</string>
+    <string name="plate_calc_segment">Calculate barbell weight with ease!</string>
+    <string name="community_segment">Join a community of workout enthusiasts!</string>
+    <string name="weekly_workout_counts">Weekly Workout Counts</string>
+    <string name="weekly_workout_time">Time Spent Weekly (mins)</string>
+    <string name="weekly_workouts">Weekly Workouts</string>
+
+    <!--Settings-->
+    <string name="settings_title">Settings</string>
+    <string name="dark_mode">Turn on Dark Mode</string>
+    <string name="select_theme">Select Theme</string>
+    <string name="night">Night</string>
+    <string name="silver_night">Silver</string>
+    <string name="default_mode">Default</string>
+    <string name="ice_mode">Ice</string>
+    <string name="select_weight_system">Select Weight System</string>
+    <string name="stone">st</string>
+    <string name="kg">kg</string>
+    <string name="lb">lb</string>
+
+    <!--Premium-->
+    <string name="premium_title">Unlock Now</string>
+    <string name="premium_description">Unlock all features to take your workouts to the next level</string>
+    <string name="premium_gif">Premium features illustration</string>
+
+    <string name="explore_all">Start Exploring</string>
+    <string name="current_free_limit_5">Current free limit: 5</string>
+    <string name="lock_icon">lock_icon</string>
+
+        <!--purchases-->
+        <string name="tier_1_title">Tier 1</string>
+        <string name="tier_1_description">Gain access to\n- 10 workout templates (x2) ✅\n-
+            Advanced Visuals ✅\n- Exercise Specific Statistics ✅\n- Public Repositories ✅</string>
+        <string name="activated">Activated</string>
+        <string name="pending">Pending</string>
+        <string name="tier_1_purchased">Tier 1 Purchased</string>
+        <string name="tier_2_purchased">Tier 2 Purchased</string>
+        <string name="tier_1_monthly_price">SGD 2.99</string>
+        <string name="tier_1_monthly_title"><b>Basic</b></string>
+        <string name="tier_1_monthly_description"><i>Try our services for a month and get access
+            to all Tier 1 features!\nCharged every month</i></string>
+        <string name="tier_1_biannual_price">SGD 9.99</string>
+        <string name="tier_1_biannual_title"><b>Fit</b></string>
+        <string name="tier_1_biannual_description"><i>For dedicated gym goers!\nCharged every 6 months</i></string>
+
+        <string name="tier_2_title">Tier 2</string>
+        <string name="tier_2_description">Gain access to\n- All Tier 1 benefits ✅\n- 25 workout
+            templates (x5) ✅\n- Save rest timers and notes across devices ✅\n -Custom Themes! ✅</string>
+        <string name="tier_2_monthly_price">SGD 19.99</string>
+        <string name="tier_2_monthly_title"><b>Jacked</b></string>
+        <string name="tier_2_monthly_description"><i>For experienced lifters - Commit for a month
+            and progress faster than ever!\nCharged every month</i></string>
+        <string name="tier_2_biannual_price">SGD 59.99</string>
+        <string name="tier_2_biannual_title"><b>Elite</b></string>"
+        <string name="tier_2_biannual_description"><i>Gym veteran territory…\nCharged every 6 months</i></string>
+
+        <string name="subscribe_none">Back to app</string>
+        <string name="none_title"><b>Resume free plan</b></string>
+        <string name="none_description"><i>Im just browsing</i></string>
+
+        <!--Benefits-->
+        <string name="advanced_visuals">- Advanced Visualisations</string>
+        <string name="max_workouts">- Max 25 Workouts</string>
+        <string name="specific_stats">- Exercise Specific Statistics and Insights</string>
+        <string name="persistent_storage">- Persistent storage for rest timers and notes across devices</string>
+        <string name="custom_themes">- Custom Themes\n\nand More!</string>"
+
+        <!--Text-->
+        <string name="premium_0">Unchain your limits!</string>
+        <string name="premium_1">Get Workout Tracker PRO and unlock all features to take your
+            workouts to the next level</string>
+        <string name="premium_2">Current Free Limit: 5</string>
+        <string name="premium_3">Analytics driven insights!</string>
+        <string name="premium_4">Gain invaluable insights with the latest data</string>
+        <string name="failed_ack">Failed to acknowledge purchase. Retrying in %d seconds.</string>
+        <string name="purchase_progress">Thanks for purchasing a subscription!
+            \nJust a moment, do not leave the page.</string>
+
+    <!--Workout-->
+    <string name="workout_title">Workout Title</string>
+    <string name="add_workout">Add Workout</string>
+    <string name="add_program">Add to Program</string>
+    <string name="program_name">Program Name</string>
+    <string name="add_custom_workout">Custom</string>
+    <string name="sample_templates">Sample Templates</string>
+    <string name="workout_description">Workout Description</string>
+    <string name="start">Start</string>
+    <string name="start_workout">Start Workout</string>
+    <string name="view_workout">View Workout</string>
+
+    <string name="workout_name">Workout Name</string>
+    <string name="workout_name_hint">Name</string>
+    <string name="workout_notes">Workout Notes</string>
+    <string name="workout_notes_hint">Enter notes here</string>
+    <string name="add_exercise">Add Exercise</string>
+    <string name="exercise_selection">Exercise Selection</string>
+    <string name="add_set">Add Set</string>
+    <string name="reps">reps</string>
+    <string name="set">set</string>
+    <string name="delete_workout_exercise">Delete Exercise</string>
+    <string name="create_superset">Create Superset/Move</string>
+    <string name="create_notes">Create Notes</string>
+    <string name="auto_rest_timer">Auto Rest Timer</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="skip_timer">Skip Timer</string>
+    <string name="drag_handle">drag_handle</string>
+    <string name="move_title">Move Exercises</string>
+    <string name="move">Move</string>
+    <string name="superset_title">Superset Exercises</string>
+    <string name="superset">Superset</string>
+    <string name="clear_sets">Clear Sets</string>
+    <string name="save_order">Save order</string>
+    <string name="hide_sets">Hide Sets</string>
+    <string name="delete_notes">Delete Notes</string>
+    <string name="add_notes_hint">Add your notes here</string>
+
+    <string name="warm_up_set">Warm Up Set</string>
+    <string name="drop_set">Drop Set</string>
+    <string name="rest_pause_set">Rest Pause Set</string>
+    <string name="failure_set">Failure Set</string>
+
+    <string name="share_workout_text">Check out this workout: %s</string>
+    <string name="share_workout">Share Workout</string>
+
+    <!--Summary-->
+    <string name="summary">Summary</string>
+    <string name="save_workout_message">Save as workout?</string>
+    <string name="save_workout">Save</string>
+    <string name="save_exercise_order">Save order</string>
+    <string name="save_values">Save values</string>
+    <string name="save_rest_timers">Save rest timers</string>
+    <string name="save_notes">Save exercise notes</string>
+    <string name="save_supersets">Save supersets</string>
+    <string name="save_workout_details">Save workout details</string>
+
+    <!--exercises-->
+    <string name="create_exercise">Create Exercise</string>
+    <string name="update_exercise">Update Exercise</string>
+    <string name="exercise_title">Title</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="exercise_body_part">Body Part</string>
+    <string name="exercise_description">Description</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="instructions">Instructions</string>
+    <string name="enter_instructions">Enter Instructions</string>
+    <string name="update">Update</string>
+    <string name="delete_exercise">Delete</string>
+    <string name="filter_exercises">Filter exercises</string>
+    <string name="user_created_icon_desc">User Created Exercise</string>
+    <string name="exercise_records_total_vol">Total Volume: %s</string>
+    <string name="exercise_records_reps_performed">Reps Performed: %d</string>
+    <string name="exercise_records_sets_performed">Sets Performed: %d</string>
+    <string name="exercise_records_personal_best">Personal Best: %d</string>
+    <string name="exercise_records_records">Records</string>
+    <string name="exercise_info_details">Details</string>
+    <string name="exercise_info_records_set">Set</string>
+    <string name="exercise_info_records_est_1rm">Est. 1RM</string>
+    <string name="exercise_info_records_pb">PB</string>
+        <!--Filter page-->
+        <string name="select_an_option">Select an Option</string>
+        <string name="private_">Private</string>
+
+        <string name="type">Type</string>
+        <string name="type_auto">Type (Auto)</string>
+        <string name="barbell">Barbell</string>
+        <string name="dumbbell">Dumbbell</string>
+        <string name="machine">Machine</string>
+        <string name="cable">Cable</string>
+        <string name="kettle_bell">Kettle Bell</string>
+        <string name="weight_plate">Weight Plate</string>
+        <string name="resistance_band">Resistance Band</string>
+        <string name="calisthenics">Calisthenics</string>
+        <string name="other">Other</string>
+
+        <string name="body_part">Body Part</string>
+        <string name="arms">Arms</string>
+        <string name="legs">Legs</string>
+        <string name="chest">Chest</string>
+        <string name="body_back">Back</string>
+        <string name="full_body">Full Body</string>
+        <string name="shoulders">Shoulders</string>
+        <string name="abs">Abs</string>
+        <string name="body_other">Other</string>
+        <string name="done">Done</string>
+
+        <string name="category">Category</string>
+        <string name="compound">Compound</string>
+        <string name="isolation">Isolation</string>
+        <string name="cardio">Cardio</string>
+        <string name="duration">Duration</string>
+
+    <!--History-->
+    <string name="history_title">History</string>
+    <string name="update_history_workout">Update History</string>
+    <string name="date">Date</string>
+
+    <!--Stats-->
+    <string name="select_visuals">Select Visuals</string>
+    <string name="last_8_weeks">Last 8 weeks</string>
+    <string name="last_12_weeks">Last 12 weeks</string>
+    <string name="last_16_weeks">Last 16 weeks</string>
+    <string name="last_20_weeks">Last 20 weeks</string>
+    <string name="last_24_weeks">Last 24 weeks</string>
+</resources>

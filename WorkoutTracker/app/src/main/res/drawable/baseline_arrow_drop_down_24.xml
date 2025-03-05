@@ -1,0 +1,19 @@
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:viewportHeight="24"
+    android:viewportWidth="24"
+    android:width="24dp"
+    android:elevation="10dp">
+      
+    <path
+        android:fillColor="?attr/iconFillColor"
+        android:pathData="M7,10l5,5 5,-5z"/>
+    
+</vector>

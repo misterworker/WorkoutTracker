@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="@drawable/wood_texture">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:backgroundTint="@color/white">
+
+            <!-- Tier 1 Section -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:alpha="0.6"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_title"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_description"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp" />
+            </LinearLayout>
+
+
+            <!-- Card 1: Tier 1 Monthly Plan -->
+            <LinearLayout
+                android:id="@+id/basic_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_border_silver"
+                android:elevation="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_monthly_title"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_monthly_description"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/basic_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_monthly_price"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+
+            <!-- Card 2: Tier 1 Biannual Plan -->
+            <LinearLayout
+                android:id="@+id/fit_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_border_silver"
+                android:elevation="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_biannual_title"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_biannual_description"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/fit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_1_biannual_price"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+
+            <!-- Tier 2 Section -->
+
+            <LinearLayout
+                android:id="@+id/jacked_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:alpha="0.6"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="24dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_title"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_description"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp" />
+            </LinearLayout>
+
+            <!-- Card 3: Tier 2 Monthly Plan -->
+            <LinearLayout
+                android:id="@+id/elite_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_border_gold"
+                android:elevation="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_monthly_title"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_monthly_description"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/jacked_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_monthly_price"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+
+            <!-- Card 4: Tier 2 Biannual Plan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_border_gold"
+                android:elevation="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_biannual_title"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_biannual_description"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/elite_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tier_2_biannual_price"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+
+            <!-- Card 5: Free Plan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/card_border_translucent"
+                android:elevation="4dp"
+                android:gravity="center|top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/none_title"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/none_description"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/close_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subscribe_none"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="@string/purchase_progress"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/failed_ack_text"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="@string/failed_ack"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</FrameLayout>

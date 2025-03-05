@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/premium_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood_texture"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        android:id="@+id/benefits_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:background="@android:color/background_dark"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/benefit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/advanced_visuals"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/benefit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/max_workouts"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/benefit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/specific_stats"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/benefit4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/persistent_storage"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/benefit5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_themes"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/explore_all_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/explore_all"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/cooler_black"
+        android:layout_marginTop="8dp"
+        android:alpha="0.9"
+        app:layout_constraintTop_toBottomOf="@id/benefits_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/subscribe_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/premium_title"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/black"
+        android:alpha="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/close_button"
+        app:layout_goneMarginTop="24dp"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/cooler_black"
+        android:layout_marginBottom="32dp"
+        android:alpha="0.9"
+        app:layout_constraintBottom_toBottomOf="@id/premium_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_goneMarginTop="16dp"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

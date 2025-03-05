@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/default_profile_picture"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_shape"
+        android:elevation="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/workouts_completed"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/workouts_completed_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/chartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/weekly_workout_counts"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageButton
+                    android:id="@+id/add_visual_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/baseline_add_24"
+                    android:contentDescription="@string/menu" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/prev_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/baseline_chevron_left_24"
+                    android:background="?attr/selectableItemBackground"
+                    android:scaleType="centerInside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/viewPagerCharts"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- ViewPager2 for swiping through charts -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerCharts"
+                    android:layout_width="0dp"
+                    android:layout_height="210dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <!-- TabLayout for the charts -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/charts_tab_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/transparent"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewPagerCharts"/>
+
+                <ImageView
+                    android:id="@+id/next_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/baseline_chevron_right_24"
+                    android:background="?attr/selectableItemBackground"
+                    android:scaleType="centerInside"
+                    app:layout_constraintStart_toEndOf="@id/viewPagerCharts"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/home_category_new_workout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/cardview_dark_background"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ViewAnimator
+                        android:id="@+id/new_workout_viewAnimator"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Original Layout -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/plus_icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="16dp"
+                                android:src="@drawable/baseline_add_box_24"
+                                android:contentDescription="@string/home_category_new_workout"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true" />
+
+                            <TextView
+                                android:id="@+id/new_workout_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="8dp"
+                                android:text="@string/home_category_new_workout"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <!-- New Segment -->
+                        <RelativeLayout
+                            android:id="@+id/new_workout_segment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:text="@string/new_workout_segment"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <Button
+                                android:id="@+id/new_workout_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/go"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="16dp"/>
+
+                            <!-- Any other content for the new segment can be added here -->
+                        </RelativeLayout>
+                    </ViewAnimator>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/home_category_community"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="#4f42b5"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ViewAnimator
+                        android:id="@+id/community_viewAnimator"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Original Layout -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/community_icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="16dp"
+                                android:src="@drawable/baseline_people_24"
+                                android:contentDescription="@string/home_category_community"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true" />
+
+                            <TextView
+                                android:id="@+id/community_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="8dp"
+                                android:text="@string/home_category_community"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <!-- New Segment -->
+                        <RelativeLayout
+                            android:id="@+id/community_segment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:text="@string/community_segment"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <Button
+                                android:id="@+id/community_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/go"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="16dp"/>
+
+                            <!-- Any other content for the new segment can be added here -->
+                        </RelativeLayout>
+                    </ViewAnimator>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/home_category_plate_calc"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="#6B5B95"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ViewAnimator
+                        android:id="@+id/plate_calc_viewAnimator"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Original Layout -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/plate_calc_icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="16dp"
+                                android:src="@drawable/baseline_fitness_center_24"
+                                android:contentDescription="@string/home_category_plate_calc"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true" />
+
+                            <TextView
+                                android:id="@+id/plate_calc_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="8dp"
+                                android:text="@string/home_category_plate_calc"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <!-- New Segment -->
+                        <RelativeLayout
+                            android:id="@+id/plate_calc_segment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:text="@string/plate_calc_segment"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+                            <Button
+                                android:id="@+id/plate_calc_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/go"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="16dp"/>
+
+                            <!-- Any other content for the new segment can be added here -->
+                        </RelativeLayout>
+                    </ViewAnimator>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:id="@+id/dimView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:alpha="0.5"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

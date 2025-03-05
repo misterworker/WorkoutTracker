@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2024.
+  ~ All rights reserved.
+  ~ This file is part of the Workout Tracker App.
+  ~ Unauthorized copying and distribution is prohibited.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeVisualFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Filter Icon -->
+    <ImageView
+        android:id="@+id/filter_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:contentDescription="@string/filter_exercises"
+        android:src="@drawable/ic_filter_funnel_2"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bar Chart -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/weeklyCounts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/filter_icon"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Line Chart -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/weeklyTimeTaken"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/filter_icon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Radar Chart -->
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/radarChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/filter_icon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Pie Chart -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/filter_icon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
