@@ -15,8 +15,8 @@ The app includes features for:
 
 ## Project Structure
 
-### 1. **`WorkoutTrackerHelpers/WorkoutTrackerHelpers/public`**
-In the `workouttrackerwebsite/public` directory, you will find a file called `auth_handle_mgmt_query_params.js`. **You must fill in your project details** in this file for proper authentication handling. This file handles routing and management of authentication parameters.
+### 1. **`WorkoutTrackerHelpers/WorkoutTrackerWebsite/public`**
+In the `workouttrackerwebsite/auth_app/public` directory, you will find a file called `auth_handle_mgmt_query_params.js`. **You must fill in your project details** in this file for proper authentication handling. Do the same for `reset_password.js`
 
 ### 2. **`WorkoutTrackerHelpers/`**
 The `helpers` folder contains essential files for administrative and authentication-related processes. These files include:
@@ -50,9 +50,9 @@ Make sure you have the following installed:
    - Download the `google-services.json` file for your new Firebase project.
    - Place the `google-services.json` file under the `WorkoutTracker/app` directory in the Android project.
 
-2. **Create `auth_handle_mgmt_query_params.js`**:
-   - In the `WorkoutTrackerHelpers/WorkoutTrackerHelpers/public` directory, create a file called `auth_handle_mgmt_query_params.js`.
-   - Add your Firebase project details to this file for authentication handling. This file is crucial for managing routing and authentication parameters properly.
+2. **Update `auth_handle_mgmt_query_params.js` and `reset_password.js`**:
+   - In the `WorkoutTrackerHelpers/WorkoutTrackerWebsite/public/auth_app` directory, update the project details.
+   - Add your Firebase project details to these files for authentication handling. This file is crucial for managing routing and authentication parameters properly.
 
 3. **Set up Cloud Run Service**:
    - In the same Firebase project, set up a Cloud Run service called `verify-purchase`.
