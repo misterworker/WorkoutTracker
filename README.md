@@ -1,5 +1,6 @@
 # Workout Tracker Application (Discontinued)
 
+## Preview
 ![Workout Tracker Main Page Screenshot](images/mainpage.jpg)
 ![Workout Tracker Workouts Page Screenshot](images/workouts.jpg)
 
@@ -12,6 +13,7 @@ The app includes features for:
 - **Custom Exercise Creation**: Users can create their own exercises to track.
 - **Workout Creation**: Users can create and customize workouts.
 - **Play Store Premium Subscription Integration**: The app integrates with the Play Store for premium subscription management.
+- **Intuitive Superset Creation**: Exercises can be supersetted with the intuitive superset page. It is cleverly designed to create, update and delete supersets efficiently.
 
 ## Project Structure
 
