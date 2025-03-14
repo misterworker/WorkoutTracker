@@ -1,11 +1,17 @@
 # Workout Tracker Application (Discontinued)
 
-## Preview
-![Workout Tracker Main Page Screenshot](images/mainpage.jpg)
-![Workout Tracker Workouts Page Screenshot](images/workouts.jpg)
-
 ## Overview
 Welcome to the Workout Tracker project! This repository contains the Android application for tracking workouts, as well as the necessary backend and administrative tools for managing users and authentication.
+
+<details>
+  <summary>Click to view preview</summary>
+
+  ![Workout Tracker Main Page](images/mainpage.jpg)  
+  ![Workout Tracker Workouts Page](images/workouts.jpg)  
+  ![Workout Tracker Premium Page](images/premium.jpg)  
+
+</details>
+
 
 The app includes features for:
 - **Themes**: Users can choose from different visual themes.
